@@ -1,0 +1,9 @@
+{
+  "name": "martunis",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "./public" },
+  "routes": [
+    { "pattern": "martunis.my.id", "custom_domain": true },
+    { "pattern": "www.martunis.my.id", "custom_domain": true }
+  ]
+}
