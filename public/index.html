@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Martunis – Guru</title>
-<meta name="description" content="Martunis, guru yang membantu siswa belajar dengan cara yang menyenangkan, terarah, dan bermakna.">
-<meta property="og:title" content="Martunis – Guru">
-<meta property="og:description" content="Mengajar dengan hati, membimbing dengan teladan.">
+<title>Martunis – Guru, Desainer &amp; Pengembang Web</title>
+<meta name="description" content="Martunis, guru sekaligus desainer dan pengembang web yang membantu membangun situs modern, cepat, dan berdampak.">
+<meta property="og:title" content="Martunis – Guru, Desainer &amp; Pengembang Web">
+<meta property="og:description" content="Merancang pengalaman digital yang memberi hasil.">
+<meta property="og:image" content="https://martunis.my.id/img/martunis.webp">
 <meta property="og:url" content="https://martunis.my.id">
 <meta name="theme-color" content="#0b0716">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -14,133 +15,111 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#0b0716; --bg2:#120a24; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.09);
-  --text:#f4f1fb; --muted:#b9b1cc; --ungu:#8b5cf6; --ungu2:#a855f7; --ungu3:#c084fc;
-  --grad:linear-gradient(135deg,#7c3aed,#a855f7);
-}
+:root{--bg:#0b0716;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.1);--text:#f4f1fb;--muted:#bdb5cf;--ungu3:#c084fc;--grad:linear-gradient(135deg,#7c3aed,#a855f7)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;z-index:-1;
-  background:radial-gradient(900px 600px at 85% 5%,rgba(139,92,246,.22),transparent 60%),
-             radial-gradient(700px 500px at 0% 60%,rgba(168,85,247,.12),transparent 60%),
-             radial-gradient(800px 500px at 100% 100%,rgba(124,58,237,.18),transparent 60%),var(--bg)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(900px 600px at 85% 5%,rgba(139,92,246,.22),transparent 60%),radial-gradient(700px 500px at 0% 60%,rgba(168,85,247,.1),transparent 60%),radial-gradient(900px 500px at 100% 100%,rgba(124,58,237,.2),transparent 60%),var(--bg)}
 a{color:inherit;text-decoration:none}
 .wrap{width:min(1140px,92%);margin-inline:auto}
 svg{flex-shrink:0}
+.panah{width:16px;height:16px}
 
-/* Header */
 header{position:sticky;top:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
-header.gulir{background:rgba(11,7,22,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+header.gulir{background:rgba(11,7,22,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
 .logo{display:flex;align-items:center;gap:12px}
-.logo-m{width:42px;height:42px;border-radius:12px;background:var(--grad);display:grid;place-items:center;font-weight:800;font-size:20px;box-shadow:0 0 24px rgba(168,85,247,.45)}
-.logo b{display:block;font-size:17px;line-height:1.1}
-.logo small{color:var(--muted);font-size:12px}
-.menu{display:flex;gap:32px;font-size:15px;color:var(--muted)}
+.logo-m{font-size:34px;font-weight:300;letter-spacing:-3px;line-height:1}
+.logo b{display:block;font-size:17px;line-height:1.15}
+.logo small{color:#d8d1e6;font-size:12px}
+.menu{display:flex;gap:36px;font-size:15px;color:#d8d1e6}
 .menu a{position:relative;padding:6px 0;transition:color .2s}
-.menu a:hover,.menu a.aktif{color:var(--text)}
-.menu a.aktif::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:2px;background:var(--ungu3)}
+.menu a:hover,.menu a.aktif{color:#fff;font-weight:600}
+.menu a.aktif::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;border-radius:2px;background:var(--ungu3)}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:0;font-family:inherit;color:var(--text)}
-.btn-utama{background:var(--grad);box-shadow:0 8px 30px rgba(139,92,246,.4)}
-.btn-utama:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(139,92,246,.55)}
-.btn-garis{border:1px solid rgba(255,255,255,.25);background:transparent}
+.btn-utama{background:var(--grad);box-shadow:0 0 0 1px rgba(255,255,255,.15) inset,0 8px 30px rgba(139,92,246,.45)}
+.btn-utama:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(139,92,246,.6)}
+.btn-garis{border:1px solid rgba(255,255,255,.35);background:transparent}
 .btn-garis:hover{background:rgba(255,255,255,.06)}
 .btn-kecil{padding:9px 18px;font-size:14px}
 .burger{display:none;background:none;border:0;color:var(--text);cursor:pointer}
 
-/* Hero */
-.hero{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding:40px 0 70px}
-.lencana{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:13px;font-weight:500}
-.lencana i{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e}
-h1{font-size:clamp(36px,5.2vw,62px);line-height:1.08;font-weight:800;margin:22px 0 20px;letter-spacing:-.02em}
+.hero{position:relative;display:grid;grid-template-columns:1fr 1.05fr;align-items:end;gap:20px;padding-top:24px}
+.hero-teks{padding-bottom:40px}
+.lencana{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--line);font-size:13px;font-weight:500}
+.lencana i{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e}
+h1{font-size:clamp(34px,4.6vw,56px);line-height:1.08;font-weight:800;margin:20px 0 20px;letter-spacing:-.02em}
 h1 em{font-style:italic;background:linear-gradient(90deg,#a855f7,#c084fc);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lead{color:var(--muted);font-size:17px;max-width:470px}
-.aksi{display:flex;gap:14px;margin:32px 0 40px;flex-wrap:wrap}
-.angka{display:flex;gap:0;flex-wrap:wrap}
-.angka div{display:flex;align-items:center;gap:12px;padding:0 24px;border-left:1px solid var(--line)}
+.lead{color:#ddd6ea;font-size:16.5px;max-width:460px}
+.aksi{display:flex;gap:18px;margin:30px 0 40px;flex-wrap:wrap}
+.angka{display:flex;flex-wrap:wrap;row-gap:14px}
+.angka div{display:flex;align-items:center;gap:12px;padding:0 22px;border-left:1px solid var(--line)}
 .angka div:first-child{padding-left:0;border:0}
 .angka svg{color:var(--ungu3)}
-.angka b{font-size:24px;display:block;line-height:1.1}
-.angka small{font-size:12px;color:var(--muted)}
+.angka b{font-size:22px;display:block;line-height:1.1}
+.angka small{font-size:11.5px;color:var(--muted)}
+.foto{position:relative;align-self:stretch;min-height:420px}
+.bingkai{position:absolute;right:-6%;bottom:0;width:112%;aspect-ratio:1138/880}
+.foto img{width:100%;height:100%;display:block;
+  -webkit-mask:linear-gradient(90deg,transparent 0,#000 12%) ,linear-gradient(0deg,transparent 0,#000 6%);-webkit-mask-composite:source-in;
+  mask:linear-gradient(90deg,transparent 0,#000 12%) intersect,linear-gradient(0deg,transparent 0,#000 6%)}
+.kartu-apung{position:absolute;padding:14px 16px;border-radius:16px;background:rgba(32,20,60,.92);backdrop-filter:blur(10px);border:1px solid rgba(192,132,252,.35);display:flex;gap:12px;align-items:center;font-size:14px;font-weight:600;line-height:1.45;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.kartu-apung .ik{color:var(--ungu3);font-weight:700}
+.kartu-apung .bul{width:30px;height:30px;border-radius:50%;background:#5b3aa6;display:grid;place-items:center;margin-left:4px}
+.foto .kartu-apung{left:.6%;top:39.6%;width:26.6%;height:19.4%;justify-content:space-between;font-size:clamp(10px,1.25vw,15px);padding:0 4%}
 
-.visual{position:relative;aspect-ratio:1/1;max-width:520px;width:100%;justify-self:end}
-.lingkar{position:absolute;inset:6%;border-radius:50%;border:2px solid rgba(192,132,252,.55);
-  box-shadow:0 0 40px rgba(168,85,247,.45),inset 0 0 60px rgba(168,85,247,.25);
-  background:radial-gradient(circle at 50% 40%,rgba(139,92,246,.35),rgba(18,10,36,.9) 70%)}
-.foto{position:absolute;inset:12%;border-radius:50%;overflow:hidden;display:grid;place-items:center;
-  background:linear-gradient(160deg,#2a1650,#120a24)}
-.foto span{font-size:clamp(90px,14vw,170px);font-weight:800;background:linear-gradient(180deg,#e9d5ff,#a855f7);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 30px rgba(168,85,247,.5))}
-.foto img{width:100%;height:100%;object-fit:cover}
-.kartu-apung{position:absolute;left:-4%;top:30%;padding:16px 18px;border-radius:16px;background:rgba(30,18,58,.75);backdrop-filter:blur(10px);border:1px solid rgba(192,132,252,.3);display:flex;gap:12px;align-items:center;font-size:14px;font-weight:600;line-height:1.5;box-shadow:0 10px 40px rgba(0,0,0,.4);animation:apung 5s ease-in-out infinite}
-.kartu-apung svg{color:var(--ungu3)}
-.kartu-apung .panah{width:30px;height:30px;border-radius:50%;background:var(--grad);display:grid;place-items:center;margin-left:6px}
-.kartu-apung2{left:auto;right:-2%;top:auto;bottom:10%;animation-delay:-2.5s}
-@keyframes apung{50%{transform:translateY(-10px)}}
-
-/* Pita */
-.pita{border-block:1px solid var(--line);background:rgba(255,255,255,.02)}
-.pita .wrap{display:flex;align-items:center;gap:40px;padding:26px 0;flex-wrap:wrap}
+.pita{border-top:1px solid var(--line);background:rgba(11,7,22,.6)}
+.pita .wrap{display:flex;align-items:center;gap:36px;padding:24px 0;flex-wrap:wrap}
 .pita h4{font-size:15px;font-weight:600;line-height:1.3;padding-right:36px;border-right:1px solid var(--line)}
-.pita ul{display:flex;flex:1;justify-content:space-between;gap:28px;list-style:none;flex-wrap:wrap}
-.pita li{display:flex;align-items:center;gap:10px;color:#ddd6ee;font-weight:700;font-size:17px;opacity:.9}
-.pita li svg{color:var(--ungu3)}
+.pita ul{display:flex;flex:1;justify-content:space-between;gap:24px;list-style:none;flex-wrap:wrap}
+.pita li{display:flex;align-items:center;gap:9px;color:#fff;font-weight:700;font-size:18px;letter-spacing:-.01em}
 
-/* Bagian */
-section.bag{padding:90px 0 0}
-.label{color:var(--ungu3);font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
-h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15;font-weight:700;margin:10px 0 18px;letter-spacing:-.01em}
-.muted{color:var(--muted)}
+section.bag{padding:80px 0 0}
+.label{color:var(--ungu3);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+h2{font-size:clamp(28px,3.2vw,36px);line-height:1.15;font-weight:700;margin:8px 0 16px;letter-spacing:-.01em}
+.muted{color:#d5cee3}
 
-.tentang{display:grid;grid-template-columns:1fr 1.05fr .8fr;gap:28px;align-items:stretch}
-.cek{list-style:none;margin:20px 0 28px;display:grid;gap:10px}
-.cek li{display:flex;gap:10px;align-items:center}
-.cek li span{width:20px;height:20px;border-radius:50%;background:var(--grad);display:grid;place-items:center}
-.gambar-meja{border-radius:28px;overflow:hidden;border:1px solid var(--line);min-height:300px;position:relative;
-  background:linear-gradient(160deg,#1d1238,#0f0820)}
-.gambar-meja svg{position:absolute;inset:0;width:100%;height:100%}
-.tumpuk{display:grid;gap:20px}
-.kotak{border-radius:22px;padding:24px;background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
-.kotak:hover{border-color:rgba(192,132,252,.45);transform:translateY(-3px)}
-.kotak .bulat{position:absolute;top:20px;right:20px;width:36px;height:36px;border-radius:50%;background:var(--grad);display:grid;place-items:center}
-.kotak b.besar{font-size:38px;line-height:1}
+.tentang{display:grid;grid-template-columns:1fr 1fr .78fr;gap:28px;align-items:center}
+.cek{list-style:none;margin:16px 0 24px;display:grid;gap:8px}
+.cek li{display:flex;gap:10px;align-items:center;font-size:15px}
+.cek li span{width:19px;height:19px;border-radius:50%;background:#9b6cf0;display:grid;place-items:center}
+.gambar-meja{border-radius:34px;overflow:hidden;border:1px solid rgba(255,255,255,.15);aspect-ratio:336/264}
+.gambar-meja img{width:100%;height:100%;object-fit:cover;display:block}
+.tumpuk{display:grid;gap:18px}
+.kotak{border-radius:20px;padding:24px;background:var(--card);border:1px solid rgba(255,255,255,.12);position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.kotak:hover{border-color:rgba(192,132,252,.5);transform:translateY(-3px)}
+.kotak .bulat{position:absolute;top:20px;right:20px;width:34px;height:34px;border-radius:50%;background:var(--grad);display:grid;place-items:center}
+.kotak b.besar{font-size:36px;line-height:1}
 
 .kepala-bag{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-.kepala-bag .catatan{max-width:280px;font-size:14px;color:var(--muted);border-left:1px solid var(--line);padding-left:18px;margin-bottom:22px}
-.layanan{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:10px}
-.layanan .kotak{padding:28px 24px;min-height:220px}
-.layanan .kotak.sorot{background:linear-gradient(160deg,#7c3aed,#9333ea 60%,#6d28d9);border-color:rgba(255,255,255,.2);box-shadow:0 20px 50px rgba(124,58,237,.35)}
-.layanan .kotak.sorot p{color:#efe7ff}
-.layanan .ikon{color:#e9d5ff;margin-bottom:20px}
-.layanan h3{font-size:19px;line-height:1.3;margin-bottom:12px}
-.layanan p{font-size:14.5px;color:var(--muted)}
-.layanan .bulat{background:rgba(255,255,255,.1)}
-.layanan .sorot .bulat{background:rgba(255,255,255,.2)}
+.kepala-bag .catatan{max-width:260px;font-size:13.5px;color:#d5cee3;border-left:1px solid var(--line);padding-left:42px;margin-bottom:22px;position:relative}
+.kepala-bag .catatan::before{content:"";position:absolute;left:0;top:50%;width:30px;height:1px;background:var(--line)}
+.layanan{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:6px}
+.layanan .kotak{padding:26px 26px 28px;min-height:160px}
+.layanan .kotak.sorot{background:linear-gradient(160deg,#7c3aed,#9333ea 60%,#6d28d9);border-color:rgba(255,255,255,.25);box-shadow:0 20px 50px rgba(124,58,237,.35)}
+.layanan .ikon{color:#fff;margin-bottom:14px}
+.layanan h3{font-size:16.5px;line-height:1.3;margin-bottom:10px}
+.layanan p{font-size:14px;color:#ddd6ea;line-height:1.5}
+.layanan .bulat{background:rgba(255,255,255,.1);top:22px;right:22px;width:30px;height:30px}
+.layanan .sorot .bulat{background:rgba(255,255,255,.22)}
 
-.karya{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
-.karya .kotak{padding:0}
-.karya .atas{padding:20px 22px 0;display:flex;justify-content:space-between}
-.karya h3{font-size:18px}
-.karya small{color:var(--muted);font-size:13px}
-.karya .layar{margin:18px 22px 0;height:170px;border-radius:14px 14px 0 0;border:1px solid var(--line);border-bottom:0;padding:16px;display:flex;flex-direction:column;gap:8px}
-.karya .layar i{display:block;height:9px;border-radius:5px;background:rgba(255,255,255,.12)}
-.karya .layar i.h{height:22px;width:70%;background:rgba(255,255,255,.22)}
-.k1 .layar{background:linear-gradient(160deg,#0f2a1d,#0b1a14)} .k1 .layar i.h{background:#22c55e88}
-.k2 .layar{background:linear-gradient(160deg,#2a1650,#160c2e)} .k2 .layar i.h{background:#a855f788}
-.k3 .layar{background:linear-gradient(160deg,#10223f,#0a1427)} .k3 .layar i.h{background:#3b82f688}
+.karya{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:6px}
+.karya .kotak{padding:0;border-color:rgba(255,255,255,.25)}
+.karya .atas{padding:12px 16px 4px;display:flex;justify-content:space-between;align-items:flex-start}
+.karya h3{font-size:15px;display:flex;align-items:center;gap:6px}
+.karya small{font-size:11.5px;color:#e5e0ee}
+.karya img{display:block;width:100%;height:auto}
 
-.ajak{margin:90px auto 0;display:flex;align-items:center;gap:28px;padding:34px 40px;border-radius:26px;
-  background:linear-gradient(120deg,rgba(124,58,237,.22),rgba(255,255,255,.03));border:1px solid rgba(192,132,252,.3);flex-wrap:wrap}
-.ajak .ik{width:68px;height:68px;border-radius:18px;background:var(--grad);display:grid;place-items:center;box-shadow:0 0 30px rgba(168,85,247,.5)}
+.ajak{margin:44px auto 0;display:flex;align-items:center;gap:30px;padding:22px 44px;border-radius:24px;background:rgba(20,12,40,.75);border:1px solid rgba(192,132,252,.3);flex-wrap:wrap}
+.ajak .ik{width:62px;height:62px;border-radius:16px;background:var(--grad);display:grid;place-items:center;box-shadow:0 0 30px rgba(168,85,247,.5)}
 .ajak div.t{flex:1;min-width:220px}
-.ajak h3{font-size:26px}
+.ajak h3{font-size:24px;line-height:1.3}
+.ajak p{font-size:15px;color:#ddd6ea}
 
-footer{margin-top:80px;border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px}
+footer{margin-top:60px;border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer nav{display:flex;gap:20px}
 footer a:hover{color:var(--text)}
-
 .muncul{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .muncul.tampak{opacity:1;transform:none}
 
@@ -150,21 +129,23 @@ footer a:hover{color:var(--text)}
   .layanan{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:860px){
-  .menu{position:fixed;top:76px;right:4%;flex-direction:column;gap:6px;padding:16px 22px;border-radius:18px;background:rgba(20,12,40,.92);backdrop-filter:blur(14px);border:1px solid var(--line);display:none;min-width:200px}
+  .menu{position:fixed;top:78px;right:4%;flex-direction:column;gap:6px;padding:16px 22px;border-radius:18px;background:rgba(20,12,40,.94);backdrop-filter:blur(14px);border:1px solid var(--line);display:none;min-width:200px}
   .menu.buka{display:flex}
   .burger{display:block}
-  .nav .btn-utama{display:none}
-  .hero{grid-template-columns:1fr;padding-top:20px}
-  .visual{justify-self:center;max-width:420px;order:-1}
+  .nav>.btn-utama{display:none}
+  .hero{grid-template-columns:1fr}
+  .foto{order:-1;min-height:0;aspect-ratio:1138/880;margin-inline:-4%}
+  .bingkai{right:0;width:100%}
   .karya{grid-template-columns:1fr}
   .pita h4{border:0;padding:0}
 }
 @media (max-width:560px){
   .tentang,.tumpuk,.layanan{grid-template-columns:1fr}
-  .angka div{padding:0 14px}
-  .angka b{font-size:20px}
-  .kartu-apung{font-size:12px;padding:12px 14px}
-  .ajak{padding:28px 24px}
+  .angka div{padding:0 12px}
+  .angka b{font-size:19px}
+  .foto .kartu-apung{font-size:10px;gap:6px}
+  .kartu-apung .bul{width:22px;height:22px}
+  .ajak{padding:24px}
 }
 </style>
 </head>
@@ -172,7 +153,7 @@ footer a:hover{color:var(--text)}
 
 <header id="kepala">
   <div class="wrap nav">
-    <a href="#beranda" class="logo"><span class="logo-m">M</span><span><b>Martunis</b><small>Guru &amp; Pendidik</small></span></a>
+    <a href="#beranda" class="logo"><span class="logo-m">M</span><span><b>Martunis</b><small>Guru, Desainer &amp; Pengembang</small></span></a>
     <nav class="menu" id="menu">
       <a href="#beranda" class="aktif">Beranda</a>
       <a href="#tentang">Tentang</a>
@@ -180,55 +161,49 @@ footer a:hover{color:var(--text)}
       <a href="#karya">Karya</a>
       <a href="#kontak">Kontak</a>
     </nav>
-    <a href="#kontak" class="btn btn-utama btn-kecil">Hubungi Saya
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a href="#kontak" class="btn btn-utama btn-kecil">Ayo Bekerja Sama
+      <svg class="panah" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <button class="burger" id="burger" aria-label="Menu"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </header>
 
 <main id="beranda">
   <section class="wrap hero">
-    <div>
-      <span class="lencana"><i></i>Siap Berbagi Ilmu</span>
-      <h1>Mengajar dengan Hati,<br>Membimbing dengan<br><em>Teladan</em></h1>
-      <p class="lead">Saya Martunis, seorang guru yang membantu siswa belajar dengan cara yang menyenangkan, terarah, dan bermakna, agar ilmu tidak hanya dipahami tetapi juga diamalkan.</p>
+    <div class="hero-teks">
+      <span class="lencana"><i></i>Tersedia untuk Proyek</span>
+      <h1>Merancang Pengalaman Digital yang <em>Memberi Hasil</em></h1>
+      <p class="lead">Saya seorang guru sekaligus desainer &amp; pengembang yang membantu lembaga dan usaha membangun situs serta produk digital yang modern dan berkinerja tinggi.</p>
       <div class="aksi">
-        <a href="#kontak" class="btn btn-utama">Hubungi Saya
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#kontak" class="btn btn-utama">Ajak Kerja Sama
+          <svg class="panah" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="#tentang" class="btn btn-garis">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>Kenali Saya</a>
       </div>
       <div class="angka">
-        <div><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span><b>5+</b><small>Tahun Mengajar</small></span></div>
-        <div><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.3 0 4 1.5 4.5 4.5"/></svg><span><b>500+</b><small>Siswa Dibimbing</small></span></div>
-        <div><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3a3 3 0 0 1-3 4M7 5H4a3 3 0 0 0 3 4"/></svg><span><b>98%</b><small>Siswa Puas</small></span></div>
+        <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4M8 13h2M14 13h2M8 17h2"/></svg><span><b>5+</b><small>Tahun Pengalaman</small></span></div>
+        <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5M3 16l9 5 9-5"/></svg><span><b>150+</b><small>Proyek Selesai</small></span></div>
+        <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3a3 3 0 0 1-3 4M7 5H4a3 3 0 0 0 3 4"/></svg><span><b>98%</b><small>Kepuasan Klien</small></span></div>
       </div>
     </div>
-
-    <div class="visual">
-      <div class="lingkar"></div>
-      <div class="foto"><span>M</span><!-- Ganti dengan: <img src="/foto.jpg" alt="Martunis"> --></div>
+    <div class="foto">
+      <div class="bingkai"><img src="/img/martunis.webp" alt="Martunis" width="1138" height="880">
       <div class="kartu-apung">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6.5C4.5 5 8 5 12 7c4-2 7.5-2 10-.5V19c-2.5-1.5-6-1.5-10 .5-4-2-7.5-2-10-.5z"/><path d="M12 7v12.5"/></svg>
-        <span>Mengajar<br>Membimbing<br>Menginspirasi</span>
-        <span class="panah"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </div>
-      <div class="kartu-apung kartu-apung2">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg>
-        <span>Belajar itu<br>menyenangkan</span>
-      </div>
+        <span class="ik">&lt;/&gt;</span>
+        <span>Rancang<br>Bangun<br>Wujudkan</span>
+        <span class="bul"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div></div>
     </div>
   </section>
 
   <div class="pita">
     <div class="wrap">
-      <h4>Bidang yang<br>Saya Ampu</h4>
+      <h4>Dipercaya oleh<br>Berbagai Lembaga</h4>
       <ul>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.5C4.5 5 8 5 12 7c4-2 7.5-2 10-.5V19c-2.5-1.5-6-1.5-10 .5-4-2-7.5-2-10-.5z"/></svg>Pendidikan Agama</li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Bahasa Arab</li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Akhlak</li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Media Digital</li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 5-9 5-9-5z"/><path d="M7 10.5V16c3 2 7 2 10 0v-5.5"/></svg>Bimbingan</li>
+        <li><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V10l7-5 7 5v11M10 21v-6h4v6"/></svg>Sekolah</li>
+        <li><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V11a8 8 0 0 1 16 0v10M4 21h16M12 3v-1M9 21v-5a3 3 0 0 1 6 0v5"/></svg>Madrasah</li>
+        <li><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.5C4.5 5 8 5 12 7c4-2 7.5-2 10-.5V19c-2.5-1.5-6-1.5-10 .5-4-2-7.5-2-10-.5zM12 7v12.5"/></svg>Dayah</li>
+        <li><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l10 5-10 5L2 8z"/><path d="M6 10.5V16c3.5 2.5 8.5 2.5 12 0v-5.5"/></svg>Kampus</li>
+        <li><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.3 0 4 1.5 4.5 4.5"/></svg>UMKM</li>
       </ul>
     </div>
   </div>
@@ -237,48 +212,27 @@ footer a:hover{color:var(--text)}
     <div class="tentang">
       <div class="muncul">
         <span class="label">Tentang Saya</span>
-        <h2>Guru yang Hadir untuk Setiap Siswa</h2>
-        <p class="muted">Saya memadukan kesabaran, metode yang tepat, dan teknologi agar setiap siswa dapat berkembang sesuai potensinya, bukan sekadar mengejar nilai.</p>
+        <h2>Mitra Kreatif untuk Lembaga Modern</h2>
+        <p class="muted">Saya memadukan kreativitas, strategi, dan teknologi untuk membangun pengalaman digital yang tidak hanya indah dilihat, tetapi juga mendorong pertumbuhan nyata.</p>
         <ul class="cek">
-          <li><span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Pembelajaran yang menyenangkan</li>
-          <li><span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Pendampingan akhlak dan karakter</li>
-          <li><span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Memanfaatkan media digital</li>
+          <li><span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Desain UI/UX &amp; Pemikiran Produk</li>
+          <li><span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Pengembangan yang Rapi &amp; Andal</li>
+          <li><span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Solusi Berorientasi Hasil</li>
         </ul>
         <a href="#kontak" class="btn btn-garis btn-kecil">Selengkapnya
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <svg class="panah" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-
-      <div class="gambar-meja muncul" aria-hidden="true">
-        <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#6d28d9"/></linearGradient>
-            <radialGradient id="gw" cx=".75" cy=".3" r=".6"><stop offset="0" stop-color="#a855f7" stop-opacity=".45"/><stop offset="1" stop-color="#a855f7" stop-opacity="0"/></radialGradient>
-          </defs>
-          <rect width="400" height="320" fill="url(#gw)"/>
-          <rect x="70" y="40" width="260" height="150" rx="10" fill="#1b1033" stroke="#c084fc" stroke-opacity=".5"/>
-          <rect x="82" y="52" width="236" height="126" rx="6" fill="url(#gl)" opacity=".85"/>
-          <text x="200" y="110" text-anchor="middle" fill="#fff" font-size="24" font-weight="800" font-family="Plus Jakarta Sans,sans-serif">Ayo Belajar!</text>
-          <text x="200" y="138" text-anchor="middle" fill="#f3e8ff" font-size="13" font-family="Plus Jakarta Sans,sans-serif">Ilmu · Adab · Amal</text>
-          <rect x="185" y="190" width="30" height="34" fill="#2a1a4a"/>
-          <rect x="150" y="222" width="100" height="8" rx="4" fill="#2a1a4a"/>
-          <rect x="30" y="232" width="340" height="12" rx="4" fill="#3b2566"/>
-          <rect x="60" y="200" width="56" height="32" rx="3" fill="#7c3aed"/><rect x="66" y="190" width="50" height="10" rx="2" fill="#a855f7"/>
-          <path d="M318 232c0-18 6-30 16-30s16 12 16 30z" fill="#4c1d95"/>
-          <path d="M334 202c-10-20-4-40 10-46-2 16 0 30-10 46zM334 202c-14-12-26-14-34-8 12 4 22 6 34 8z" fill="#22c55e" opacity=".75"/>
-          <circle cx="355" cy="60" r="16" fill="#fde68a" opacity=".85"/>
-        </svg>
-      </div>
-
+      <div class="gambar-meja muncul"><img src="/img/meja.webp" alt="Ruang kerja" loading="lazy"></div>
       <div class="tumpuk">
         <div class="kotak muncul">
-          <span class="bulat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
-          <b class="besar">5+</b><p class="muted" style="font-size:14px;margin-top:6px">Tahun Pengalaman</p>
-          <svg viewBox="0 0 200 50" width="100%" height="50" style="margin-top:10px"><path d="M0 40 C30 40 40 25 70 30 S120 45 140 25 S180 10 200 18" fill="none" stroke="#a855f7" stroke-width="2.5"/></svg>
+          <span class="bulat"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          <b class="besar">5+</b><p style="font-size:14px;margin-top:8px">Tahun Pengalaman</p>
+          <svg viewBox="0 0 200 50" width="100%" height="46" style="margin-top:6px"><defs><linearGradient id="gs" x1="0" x2="1"><stop offset="0" stop-color="#a855f7" stop-opacity=".2"/><stop offset="1" stop-color="#c084fc"/></linearGradient></defs><path d="M0 44 C25 44 35 30 60 34 S95 44 115 30 S150 4 170 12 S190 24 200 20" fill="none" stroke="url(#gs)" stroke-width="2.5"/></svg>
         </div>
         <a href="#kontak" class="kotak muncul">
-          <span class="bulat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#e9d5ff" stroke-width="1.8" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
-          <p style="font-size:19px;font-weight:700;line-height:1.3;margin-top:14px">Mari Belajar<br>Bersama</p>
+          <span class="bulat" style="top:50%;transform:translateY(-50%)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+          <p style="font-size:17px;font-weight:700;line-height:1.3;margin-top:12px">Mari Wujudkan<br>Sesuatu yang Hebat</p>
         </a>
       </div>
     </div>
@@ -287,64 +241,64 @@ footer a:hover{color:var(--text)}
   <section class="bag wrap" id="layanan">
     <div class="kepala-bag">
       <div><span class="label">Layanan</span><h2>Bagaimana Saya Dapat Membantu</h2></div>
-      <p class="catatan">Pendampingan belajar yang menyeluruh, dari kelas hingga karakter.</p>
+      <p class="catatan">Solusi digital menyeluruh untuk mewujudkan ide Anda.</p>
     </div>
     <div class="layanan">
-      <div class="kotak sorot muncul">
-        <span class="bulat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        <svg class="ikon" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        <h3>Pembelajaran<br>di Kelas</h3>
-        <p>Kegiatan belajar yang aktif, jelas, dan mudah dipahami.</p>
-      </div>
-      <div class="kotak muncul">
-        <span class="bulat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        <svg class="ikon" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>
-        <h3>Bimbingan<br>Belajar</h3>
-        <p>Pendampingan pribadi sesuai kebutuhan siswa.</p>
-      </div>
-      <div class="kotak muncul">
-        <span class="bulat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        <svg class="ikon" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
-        <h3>Materi &amp;<br>Modul Ajar</h3>
-        <p>Penyusunan bahan ajar yang runtut dan menarik.</p>
-      </div>
-      <div class="kotak muncul">
-        <span class="bulat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        <svg class="ikon" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg>
-        <h3>Pembinaan<br>Karakter</h3>
-        <p>Menanamkan adab, disiplin, dan akhlak mulia.</p>
-      </div>
+      <a href="#kontak" class="kotak sorot muncul">
+        <span class="bulat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <svg class="ikon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M10 9l-2 2 2 2M14 9l2 2-2 2"/></svg>
+        <h3>Desain &amp;<br>Pengembangan Web</h3>
+        <p>Situs modern, responsif, dan efektif menarik pengunjung.</p>
+      </a>
+      <a href="#kontak" class="kotak muncul">
+        <span class="bulat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <svg class="ikon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5M3 16l9 5 9-5"/></svg>
+        <h3>Branding &amp;<br>Identitas</h3>
+        <p>Membangun merek yang kuat dan mudah diingat.</p>
+      </a>
+      <a href="#kontak" class="kotak muncul">
+        <span class="bulat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <svg class="ikon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+        <h3>Desain<br>UI/UX</h3>
+        <p>Desain yang berpusat pada pengguna, intuitif, dan berdampak.</p>
+      </a>
+      <a href="#kontak" class="kotak muncul">
+        <span class="bulat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <svg class="ikon" width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="14" width="3.5" height="7" rx=".8"/><rect x="8.5" y="10" width="3.5" height="11" rx=".8"/><rect x="14" y="6" width="3.5" height="15" rx=".8"/><rect x="19.5" y="2" width="2" height="19" rx=".8"/></svg>
+        <h3>SEO &amp;<br>Pertumbuhan</h3>
+        <p>Meningkatkan visibilitas dan hasil nyata secara daring.</p>
+      </a>
     </div>
   </section>
 
   <section class="bag wrap" id="karya">
     <div class="kepala-bag">
-      <div><span class="label">Karya Pilihan</span><h2>Kegiatan &amp; Karya</h2></div>
-      <a href="#kontak" class="btn btn-garis btn-kecil" style="margin-bottom:22px">Lihat Semua
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div><span class="label">Karya Unggulan</span><h2>Proyek Pilihan</h2></div>
+      <a href="#kontak" class="btn btn-garis btn-kecil" style="margin-bottom:22px">Lihat Semua Proyek
+        <svg class="panah" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="karya">
-      <div class="kotak k1 muncul">
-        <div class="atas"><div><h3>Modul Ajar</h3><small>Bahan ajar per semester</small></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
-        <div class="layar"><i class="h"></i><i></i><i style="width:85%"></i><i style="width:60%"></i><i></i><i style="width:75%"></i></div>
+      <div class="kotak muncul">
+        <div class="atas"><div><h3><svg width="20" height="16" viewBox="0 0 20 16"><path d="M4 0h16l-2 4H2zM2 6h12l-2 4H0zM1 12h6l-2 4H0z" fill="#22c55e"/></svg>Finora</h3><small>UI/UX Platform Keuangan</small></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></div>
+        <img src="/img/finora.webp" alt="Proyek Finora" loading="lazy">
       </div>
-      <div class="kotak k2 muncul">
-        <div class="atas"><div><h3>Media Pembelajaran</h3><small>Slide, video, dan kuis</small></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
-        <div class="layar"><i class="h"></i><i style="width:90%"></i><i style="width:55%"></i><i></i><i style="width:70%"></i><i style="width:40%"></i></div>
+      <div class="kotak muncul">
+        <div class="atas"><div><h3><svg width="22" height="16" viewBox="0 0 22 16"><path d="M0 16L5 0h3l3 8 3-8h3l5 16h-4l-3-9-3 9h-2l-3-9-3 9z" fill="#c084fc"/></svg>Markevo</h3><small>Situs Agensi Pemasaran</small></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></div>
+        <img src="/img/markevo.webp" alt="Proyek Markevo" loading="lazy">
       </div>
-      <div class="kotak k3 muncul">
-        <div class="atas"><div><h3>Kegiatan Kelas</h3><small>Dokumentasi belajar siswa</small></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
-        <div class="layar"><i class="h"></i><i></i><i style="width:65%"></i><i style="width:80%"></i><i style="width:50%"></i><i></i></div>
+      <div class="kotak muncul">
+        <div class="atas"><div><h3><svg width="20" height="16" viewBox="0 0 20 16"><path d="M0 16L4 0h4l4 9 2-9h4l-4 16h-4L6 7l-2 9z" fill="#22c55e"/></svg>Nexora</h3><small>Landing Page SaaS</small></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></div>
+        <img src="/img/nexora.webp" alt="Proyek Nexora" loading="lazy">
       </div>
     </div>
   </section>
 
   <section class="wrap" id="kontak">
     <div class="ajak muncul">
-      <span class="ik"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></span>
-      <div class="t"><h3>Ingin Belajar Bersama?</h3><p class="muted">Silakan hubungi saya untuk bimbingan, kerja sama, atau sekadar bertanya.</p></div>
+      <span class="ik"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></span>
+      <div class="t"><h3>Punya Rencana Proyek?</h3><p>Mari wujudkan ide Anda menjadi pengalaman digital yang hebat.</p></div>
       <a href="mailto:halo@martunis.my.id" class="btn btn-utama">Hubungi Saya
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <svg class="panah" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 </main>
@@ -367,7 +321,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.muncul').forEach(el=>io.observe(el));
 const tautan=[...menu.querySelectorAll('a')];
 const bagian=tautan.map(a=>document.querySelector(a.getAttribute('href')));
-addEventListener('scroll',()=>{let i=0;bagian.forEach((b,k)=>{if(b&&b.getBoundingClientRect().top<160)i=k});tautan.forEach((a,k)=>a.classList.toggle('aktif',k===i))},{passive:true});
+addEventListener('scroll',()=>{let i=0;bagian.forEach((b,k)=>{if(k&&b&&b.getBoundingClientRect().top<160)i=k});tautan.forEach((a,k)=>a.classList.toggle('aktif',k===i))},{passive:true});
 </script>
 </body>
 </html>
