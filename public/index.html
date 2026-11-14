@@ -119,6 +119,10 @@ h2{font-size:clamp(28px,3.2vw,36px);line-height:1.15;font-weight:700;margin:8px 
 footer{margin-top:60px;border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer nav{display:flex;gap:20px}
+.sosial{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.sosial a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.07);border:1px solid var(--line);color:#e9d5ff;transition:background .2s,transform .2s}
+.sosial a:hover{background:#7c3aed;color:#fff;transform:translateY(-2px)}
+.sosial svg{width:18px;height:18px}
 footer a:hover{color:var(--text)}
 .muncul{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .muncul.tampak{opacity:1;transform:none}
@@ -165,7 +169,7 @@ footer a:hover{color:var(--text)}
       <a href="#karya">Karya</a>
       <a href="#kontak">Kontak</a>
     </nav>
-    <a href="#kontak" class="btn btn-utama btn-kecil">Ayo Bekerja Sama
+    <a href="https://wa.me/628227389369?text=Assalamu%27alaikum%20Martunis%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener" class="btn btn-utama btn-kecil">Ayo Bekerja Sama
       <svg class="panah" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <button class="burger" id="burger" aria-label="Menu"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
@@ -300,8 +304,15 @@ footer a:hover{color:var(--text)}
   <section class="wrap" id="kontak">
     <div class="ajak muncul">
       <span class="ik"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></span>
-      <div class="t"><h3>Punya Rencana Proyek?</h3><p>Mari wujudkan ide Anda menjadi pengalaman digital yang hebat.</p></div>
-      <a href="mailto:halo@martunis.my.id" class="btn btn-utama">Hubungi Saya
+      <div class="t"><h3>Punya Rencana Proyek?</h3><p>Mari wujudkan ide Anda menjadi pengalaman digital yang hebat.</p>
+      <div class="sosial">
+        <a href="https://wa.me/628227389369?text=Assalamu%27alaikum%20Martunis%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg></a>
+        <a href="https://www.instagram.com/__martuniss" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.tiktok.com/@askia.azzahra12" target="_blank" rel="noopener" aria-label="TikTok 1"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.4 2.3 1.8 3.8 4.1 4v3a7.3 7.3 0 0 1-4-1.2v6.6A6.1 6.1 0 1 1 10.6 9v3.1a3 3 0 1 0 2.1 2.9V3z"/></svg></a>
+        <a href="https://www.tiktok.com/@nabilanabil5105" target="_blank" rel="noopener" aria-label="TikTok 2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.4 2.3 1.8 3.8 4.1 4v3a7.3 7.3 0 0 1-4-1.2v6.6A6.1 6.1 0 1 1 10.6 9v3.1a3 3 0 1 0 2.1 2.9V3z"/></svg></a>
+        <a href="https://id.shp.ee/z3meko8o" target="_blank" rel="noopener" aria-label="Shopee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 7h16l-1.2 13a1 1 0 0 1-1 .9H6.2a1 1 0 0 1-1-.9z"/><path d="M8.5 7a3.5 3.5 0 0 1 7 0M14 11.5c-.6-.6-1.3-.9-2.1-.9-1.1 0-1.9.6-1.9 1.4 0 2 4.2 1.1 4.2 3.2 0 .9-.9 1.5-2.1 1.5-.9 0-1.8-.4-2.4-1"/></svg></a>
+      </div></div>
+      <a href="https://wa.me/628227389369?text=Assalamu%27alaikum%20Martunis%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener" class="btn btn-utama">Chat WhatsApp
         <svg class="panah" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
